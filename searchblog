@@ -1,0 +1,105 @@
+<html>
+<title>Sale a property</title>
+<head> Sale a property</head>
+
+<br/><br/><br/><br/>
+
+
+
+<style>
+body{background-image:url(templatemo_image_05.jpg); }
+#m1{background-color:#CC0000;}
+
+</style>
+
+<div id='m1' >
+<?php include("connection.php"); ?>
+<div align="center" style="width:300px height:300px">
+<?php
+
+
+
+
+<input type="radiobutton1" name="Sale" value="sale"><br/>
+<input type="radiobutton2" name="Buy" value="Buy"><br/>
+
+
+
+</div>
+
+<br/><br/><br/>
+<div>
+
+<div align='center'> 
+
+<select select="Sale" onchange="Sale" id="Price" name="Price">
+<option value="">Locations </option>
+<option value="1">Akola</option>
+<option value="2">Amravati</option>
+<option value="3">Pusad</option>
+<option value="4">Murtizapur</option>
+<option value="5">Karanja</option>
+<option value="6">Hingoli</option>
+<option value="7">Wardha</option>
+</select> 
+<br/><br/><br/><br/><br/>
+<select id="category_0" name="category">
+            <option value="0">Select Category</option>
+            					<option value="Bungalows"> Bungalows</option>
+								<option value="Flats"> Flats</option>
+								<option value="Plots"> Plots</option>
+								<option value="Shops"> Shops</option>
+								<option value="Hotels"> Hotels</option>
+			            </select>
+
+
+<br/><br/><br/><br/>
+<select select="Sale" onchange="Sale" id="Price" name="Price">
+<option value="">All Price Range in Rs. </option>
+<option value="10000000-100000000">500000-1000000</option>
+<option value="1000000-2000000">10000000-20000000</option>
+<option value="2000000-5000000">20000000-50000000</option>
+<option value="5000000-10000000">50000000-100000000</option>
+<option value="10000000">10000000</option>
+<option value="15000000">150000000</option>
+<option value="15000000+">150000000+</option>
+</select>  
+<br/><br/><br/><br/>
+</div>
+
+<div align="center">
+
+<input type="text" name="Candidate" value="cndt" />
+<br/>
+<input type="text" name="email" value="email" />
+
+<?php
+
+$ctr=0;
+$Emailid=email;
+$result2 =email;
+
+if($result2)
+{
+while($row = mysql_fetch_array($result2))
+{
+$row['Emailid']=$result2;
+}
+
+}
+$ctr++;
+
+?>
+
+<br/>
+<input type="button" name="Submit" value="sbmt" />
+</div>
+
+</div>
+
+
+
+?>
+</div>
+
+</html>
